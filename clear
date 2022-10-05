@@ -1,0 +1,120 @@
+[33mcommit 8f2cda96e6a7fe61af5ca3af4c81ac98eb369b08[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Hassan Macow <hsnmac7@gmail.com>
+Date:   Wed Oct 5 15:25:26 2022 -0600
+
+    EVc-plus code
+
+[1mdiff --git a/main.py b/main.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8ac4e59[m
+[1m--- /dev/null[m
+[1m+++ b/main.py[m
+[36m@@ -0,0 +1,108 @@[m
+[32m+[m[32mwhile True:[m
+[32m+[m[32m    Pin = 2000[m
+[32m+[m[32m    Balance = 100[m
+[32m+[m[32m    My_pin = int(input("Fadlan Geli Pinkaga : " ))[m
+[32m+[m[32m    if Pin == My_pin:[m
+[32m+[m[32m        print("1. Somali : ")[m
+[32m+[m[32m        print("2. English : ")[m
+[32m+[m[32m        print("3. Araic : " )[m
+[32m+[m[32m        while True:[m
+[32m+[m[32m            Option = int(input("Dooro Option : "))[m
+[32m+[m[32m            if Option == 1:[m
+[32m+[m[32m                print("1. Itus Haragaga : ")[m
+[32m+[m[32m                print("2. Kaarka Hadalka : ")[m
+[32m+[m[32m                print("3. Uwareeji EVCPlus : ")[m
+[32m+[m[32m                print("4. Warbixin Koban : ")[m
+[32m+[m[32m                print("5. Salaam Bank : ")[m
+[32m+[m[32m                print("6. Kabax: ")[m
+[32m+[m[32m                while True:[m
+[32m+[m[32m                    Option = int(input("Dooro Option : "))[m
+[32m+[m[32m                    if Option == 1:[m
+[32m+[m[32m                        print("Haragaga Waa : $" + str(Balance))[m
+[32m+[m[32m                        break[m
+[32m+[m[32m                    elif Option == 2:[m
+[32m+[m[32m                        print("1. Kushubo Kaarka Hadalka : ")[m
+[32m+[m[32m                        print("2. Ugu Shub Kaarka Hadalka : ")[m
+[32m+[m[32m                        while True:[m
+[32m+[m[32m                            Option = int(input("Dooro Option : "))[m
+[32m+[m[32m                            if Option == 1:[m
+[32m+[m[32m                                Kaarka = float(input("Immisa Ayad Kushubanaysa? : "))[m
+[32m+[m[32m                                if Kaarka <= 0:[m
+[32m+[m[32m                                    print("The Amount Must be Greaterthan Zero : ")[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                                elif Kaarka > Balance:[m
+[32m+[m[32m                                    print("Haragaga Kuguma Filna Mudane : " )[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                                else:[m
+[32m+[m[32m                                    print("[-EVCPus-]-Waxad Kushubatay $"+ str(Kaarka)+ " Haragaga Waa : $" + str(Balance-Kaarka))[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                            elif Option == 2:[m
+[32m+[m[32m                                Mobile = int(input("Fadlan Geli Mobile-ka : "))[m
+[32m+[m[32m                                Kaarka = float(input("Immisa Ayad Ugu Shubaysaa? : "))[m
+[32m+[m[32m                                if Kaarka <= 0:[m
+[32m+[m[32m                                    print("The Amount Must be Greaterthan Zero : ")[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                                elif Kaarka > Balance:[m
+[32m+[m[32m                                    print("Haragaga Kuguma Filna Mudane : " )[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                                else:[m
+[32m+[m[32m                                    print("[-EVCPus-]-Waxad $"+ str(Kaarka)+" Ugu Shubtey Numberka : " + str(Mobile)+" Haragaga Waa : $" + str(Balance-Kaarka))[m
+[32m+[m[32m                                    break[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                        else:[m
+[32m+[m[32m                            print("Fadlan Dooro 1 or 2 : ")[m
+[32m+[m[32m                        break[m
+[32m+[m[32m                    elif Option == 3:[m
+[32m+[m[32m                        while True:[m
+[32m+[m[32m                            global Money[m
+[32m+[m[32m                            global Tell[m
+[32m+[m[32m                            Tell = int(input("Fadlan Geli Mobile-ka : "))[m
+[32m+[m[32m                            Money = float(input("Fadlan Geli Lacagta : "))[m
+[32m+[m[32m                            if Money <= 0:[m
+[32m+[m[32m                                print("The Amount Must be Greaterthan Zero : ")[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                            elif Money > Balance:[m
+[32m+[m[32m                                print("Haragaga Kuguma Filna Mudane : " )[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                            else:[m
+[32m+[m[32m                                print("[-EVCPus-]-Waxad $"+ str(Money)+ " Uwarejisey Numberka : " + str (Tell) + " Haragaga Waa : $" + str(Balance-Money))[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                        break[m
+[32m+[m[32m                    elif Option == 4:[m
+[32m+[m[32m                        Date = 1/2/2022[m[41m [m
+[32m+[m[32m                        Money = 100[m
+[32m+[m[32m                        Tell = 616427737[m
+[32m+[m[32m                        print("1. Last Action : ")[m
+[32m+[m[32m                        print("2. Warejinti Udanbesay : ")[m
+[32m+[m[32m                        print("3. Iibsashadii Udanbesay : ")[m
+[32m+[m[32m                        print("4. Last 3 Actions : ")[m
+[32m+[m[32m                        print("5. Email Me My Acivity : ")[m
+[32m+[m[32m                        Option = int(input("Dooro Option : "))[m
+[32m+[m[32m                        if Option == 1:[m
+[32m+[m[32m                            print("[-EVCPus-]-Waxad $"+ str(Money)+ " Uwarejisey Numberka : " + str (Tell) + str(Date))[m
+[32m+[m[32m                            break[m
+[32m+[m[32m                        elif Option == 2:[m
+[32m+[m[32m                            print("1. Udirtey : ")[m
+[32m+[m[32m                            print("2. Kaheshay : ")[m
+[32m+[m[32m                            Option = int(input("Dooro Option : "))[m
+[32m+[m[32m                            Date = '1/2/2022'[m[41m [m
+[32m+[m[32m                            Money = 100[m
+[32m+[m[32m                            Tell = 616427737[m
+[32m+[m[32m                            if Option == 1:[m
+[32m+[m[32m                                Number = int(input("Fadlan Geli Numberka : "))[m
+[32m+[m[32m                                print("[-EVCPus-]-Waxad $"+ str(Money)+ " Uwarejisey Numberka : " + str (Tell)+ " Tarikhda Markey aheyd : " + str( Date) )[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                            elif Option == 2:[m
+[32m+[m[32m                                Number = int(input("Fadlan Geli Numberka : "))[m
+[32m+[m[32m                                print("[-EVCPus-]-Waxad $"+ str(Money)+ " Ka Heshay Numberka : " + str (Tell) + " Tarikhda Markey aheyd : " + str( Date) )[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                            else:[m
+[32m+[m[32m                                print("Fadlan Dooro 1 or 2 : ")[m
+[32m+[m[32m                                break[m
+[32m+[m[32m                            break[m
+[32m+[m[41m                                                          [m
+[32m+[m[32m            break[m
+[32m+[m[32m        break[m
+[32m+[m[41m                    [m
+[32m+[m[32m    else:[m
+[32m+[m[32m        print("Pinka Aad Gelisay Waa Qalad : " )[m
